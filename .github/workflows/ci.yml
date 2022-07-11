@@ -1,0 +1,26 @@
+name: CI
+on:
+  pull_request:
+    branches: 
+      - main
+
+env:
+  COVEO_PLATFORM_ENV: 'stg'
+jobs:
+  qa-preview:
+    runs-on: ubuntu-latest
+    environment: Preview
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: "npm"
+      - run: npm ci
+      - name: Login
+        uses: ./.github/actions/login
+        with:
+          environment: ${{ env.COVEO_PLATFORM_ENV }}
+          api-key: ${{ secrets.COVEO_API_KEY }}
+      - name: Preview Changes
+        uses: ./.github/actions/deploy

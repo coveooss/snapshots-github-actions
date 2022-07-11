@@ -1,0 +1,841 @@
+{
+	"metadata": {
+		"schemaVersion": "v1"
+	},
+	"resources": {
+		"MAPPING": [
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[author:crawler]"
+							],
+							"field": "{{ FIELD.author_C4YxGG }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_author_Rule:_%[author:crawler]_3hFE6q"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[authorloginname]"
+							],
+							"field": "{{ FIELD.authorloginname_PjaXCj }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_authorloginname_Rule:_%[authorloginname]_AMe1u8"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[bcc]"
+							],
+							"field": "{{ FIELD.bcc_lFYSAa }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_bcc_Rule:_%[bcc]_RZBqLX"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[cc]"
+							],
+							"field": "{{ FIELD.cc_hi1UPC }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_cc_Rule:_%[cc]_L0xbId"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[clickableuri]"
+							],
+							"field": "{{ FIELD.clickableuri_odqTpk }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_clickableuri_Rule:_%[clickableuri]_2pzurW"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[company]"
+							],
+							"field": "{{ FIELD.company_d5G8O7 }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_company_Rule:_%[company]_7LwU5Y"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[o]"
+							],
+							"field": "{{ FIELD.company_d5G8O7 }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_company_Rule:_%[o]_7hlq1j"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[connectortype]"
+							],
+							"field": "{{ FIELD.connectortype_dhAL3f }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_connectortype_Rule:_%[connectortype]_xMORYn"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[date]"
+							],
+							"field": "{{ FIELD.date_vKWOuz }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_date_Rule:_%[date]_FQNoUM"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[datebucket]"
+							],
+							"field": "{{ FIELD.datebucket_UmEDLh }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_datebucket_Rule:_%[datebucket]_v1ZeOz"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[documenttype]"
+							],
+							"field": "{{ FIELD.documenttype_DkgcuS }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_documenttype_Rule:_%[documenttype]_lRoGt7"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[fax]"
+							],
+							"field": "{{ FIELD.fax_2jzpbX }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_fax_Rule:_%[fax]_M3K85x"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[fileextension]"
+							],
+							"field": "{{ FIELD.fileextension_xmSemM }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_fileextension_Rule:_%[fileextension]_IYIrSj"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[filename]"
+							],
+							"field": "{{ FIELD.filename_op1ggh }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_filename_Rule:_%[filename]_laavVB"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[filetype]"
+							],
+							"field": "{{ FIELD.filetype_9pP5ic }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_filetype_Rule:_%[filetype]_B8zAr9"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[firstname]"
+							],
+							"field": "{{ FIELD.firstname_Z4dWEX }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_firstname_Rule:_%[firstname]_Zvl7xm"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[folders]"
+							],
+							"field": "{{ FIELD.folders_qcQA4f }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_folders_Rule:_%[folders]_B6HeAf"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[coveo_foldingchild]"
+							],
+							"field": "{{ FIELD.foldingchild_QyAq5M }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_foldingchild_Rule:_%[coveo_foldingchild]_RucO9m"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[coveo_foldingcollection]"
+							],
+							"field": "{{ FIELD.foldingcollection_srAcYQ }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_foldingcollection_Rule:_%[coveo_foldingcollection]_ykX96s"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[coveo_foldingparent]"
+							],
+							"field": "{{ FIELD.foldingparent_jXBgkk }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_foldingparent_Rule:_%[coveo_foldingparent]_srUz5P"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[from]"
+							],
+							"field": "{{ FIELD.from_dSJMAI }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_from_Rule:_%[from]_gXyj7f"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[fullname]"
+							],
+							"field": "{{ FIELD.fullname_A1XrN1 }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_fullname_Rule:_%[fullname]_1lKPWG"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[homephone]"
+							],
+							"field": "{{ FIELD.homephone_kctrWc }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_homephone_Rule:_%[homephone]_8EjKnu"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[language]"
+							],
+							"field": "{{ FIELD.language_Ie2EKe }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_language_Rule:_%[language]_mwuqG2"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[lastname]"
+							],
+							"field": "{{ FIELD.lastname_NI7UaW }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_lastname_Rule:_%[lastname]_3KULxU"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[location]"
+							],
+							"field": "{{ FIELD.location_WcREVP }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_location_Rule:_%[location]_JNl054"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[manager]"
+							],
+							"field": "{{ FIELD.manager_ISk7Fr }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_manager_Rule:_%[manager]_eouTRo"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[middlename]"
+							],
+							"field": "{{ FIELD.middlename_lOGWjz }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_middlename_Rule:_%[middlename]_ZYipPU"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[cellphone]"
+							],
+							"field": "{{ FIELD.mobilephone_OH1ZvN }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_mobilephone_Rule:_%[cellphone]_CX2CuL"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[mobile]"
+							],
+							"field": "{{ FIELD.mobilephone_OH1ZvN }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_mobilephone_Rule:_%[mobile]_OvjStT"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[mobilephone]"
+							],
+							"field": "{{ FIELD.mobilephone_OH1ZvN }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_mobilephone_Rule:_%[mobilephone]_6x0OrR"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[mobileuri]"
+							],
+							"field": "{{ FIELD.mobileuri_Tev9Rt }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_mobileuri_Rule:_%[mobileuri]_xrCpL5"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[month]"
+							],
+							"field": "{{ FIELD.month_w6A4Ib }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_month_Rule:_%[month]_5AWICF"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[office]"
+							],
+							"field": "{{ FIELD.office_K3x77L }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_office_Rule:_%[office]_TmjSu0"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[parents]"
+							],
+							"field": "{{ FIELD.parents_mWJ8sH }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_parents_Rule:_%[parents]_tgQIrq"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[permanentid]"
+							],
+							"field": "{{ FIELD.permanentid_b6hft2 }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_permanentid_Rule:_%[permanentid]_GjSFZw"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[printableuri]"
+							],
+							"field": "{{ FIELD.printableuri_E4iZsF }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_printableuri_Rule:_%[printableuri]_U1IdKr"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[coveo_externalurl]"
+							],
+							"field": "{{ FIELD.relatedlink_S1Lcyv }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_relatedlink_Rule:_%[coveo_externalurl]_nOUCQw"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[site]"
+							],
+							"field": "{{ FIELD.site_nKN9ZC }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_site_Rule:_%[site]_kt4oX4"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[changefreq]"
+							],
+							"field": "{{ FIELD.sitemapchangefrequency_9mYfLo }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_sitemapchangefrequency_Rule:_%[changefreq]_MOUoyF"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[lastmod]"
+							],
+							"field": "{{ FIELD.sitemaplastmodified_QEsVT4 }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_sitemaplastmodified_Rule:_%[lastmod]_YS4BoI"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[coveo_parentsitemapurl]"
+							],
+							"field": "{{ FIELD.sitemapparenturl_Lvvbsl }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_sitemapparenturl_Rule:_%[coveo_parentsitemapurl]_onZfWI"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[priority]"
+							],
+							"field": "{{ FIELD.sitemappriority_TP2nZ2 }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_sitemappriority_Rule:_%[priority]_4DcFsf"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[size]"
+							],
+							"field": "{{ FIELD.size_g9m7jE }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_size_Rule:_%[size]_dcbxJY"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[sourcetype]"
+							],
+							"field": "{{ FIELD.sourcetype_pVCSkU }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_sourcetype_Rule:_%[sourcetype]_EcME4L"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[subject]"
+							],
+							"field": "{{ FIELD.subject_CrNNpH }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_subject_Rule:_%[subject]_YMVUie"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[title:crawler]"
+							],
+							"field": "{{ FIELD.title_2hcj1R }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_title_Rule:_%[title:crawler]_HFkAPv"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[to]"
+							],
+							"field": "{{ FIELD.to_cj4cwI }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_to_Rule:_%[to]_DGNztI"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[workemail]"
+							],
+							"field": "{{ FIELD.workemail_HSSeeu }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_workemail_Rule:_%[workemail]_T6NX5Q"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[workphone]"
+							],
+							"field": "{{ FIELD.workphone_12hUzV }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_workphone_Rule:_%[workphone]_mM8EdD"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[worktitle]"
+							],
+							"field": "{{ FIELD.worktitle_bKR7Nx }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_worktitle_Rule:_%[worktitle]_fMOJtu"
+			},
+			{
+				"model": {
+					"rules": [
+						{
+							"content": [
+								"%[year]"
+							],
+							"field": "{{ FIELD.year_rWSt3g }}"
+						}
+					]
+				},
+				"parents": {
+					"sourceId": "{{ SOURCE.techblog_9FbJ5X }}"
+				},
+				"resourceName": "Field:_year_Rule:_%[year]_UfdspB"
+			}
+		]
+	}
+}

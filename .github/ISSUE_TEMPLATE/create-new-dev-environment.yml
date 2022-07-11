@@ -1,0 +1,12 @@
+name: Create new dev environment
+description: Use this form to create a new dev branch and new org
+title: "[Dev Branch]: "
+labels: [org-request]
+body:
+- type: input
+  attributes:
+    label: Branch name
+    description: What name your dev organization & branch do you want?
+    placeholder: "Example: my dev branch"
+  validations:
+    required: true

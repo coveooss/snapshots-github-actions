@@ -1,0 +1,19 @@
+{
+	"metadata": {
+		"schemaVersion": "v1"
+	},
+	"resources": {
+		"QUERY_PIPELINE": [
+			{
+				"model": {
+					"condition": {},
+					"isDefault": true,
+					"name": "default",
+					"splitTestEnabled": false
+				},
+				"parents": {},
+				"resourceName": "default_iRPpj1"
+			}
+		]
+	}
+}

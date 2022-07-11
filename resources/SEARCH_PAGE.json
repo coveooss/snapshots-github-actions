@@ -1,0 +1,62 @@
+{
+	"metadata": {
+		"schemaVersion": "v1"
+	},
+	"resources": {
+		"SEARCH_PAGE": [
+			{
+				"model": {
+					"css": [
+						{
+							"inlineContent": "",
+							"name": "CoveoUI",
+							"url": "https://static.cloud.coveo.com/searchui/v2.10095/css/CoveoFullSearch.min.css"
+						},
+						{
+							"inlineContent": "",
+							"name": "CoveoInterfaceEditorToolbox",
+							"url": "https://static.cloud.coveo.com/interfaceeditor/v1.29/css/InterfaceToolbox.css"
+						},
+						{
+							"inlineContent": "body {margin:0;}",
+							"name": "ResetBodyMargin",
+							"url": ""
+						}
+					],
+					"html": "<div id=\"search\" class=\"CoveoSearchInterface\" data-enable-history=\"true\">\n<div class=\"CoveoFolding\"></div>\n<div class=\"CoveoAnalytics\"></div>\n<div class=\"coveo-tab-section\">\n    <a class=\"CoveoTab\" data-id=\"All\" data-caption=\"All Content\"></a>\n</div>\n<div class=\"coveo-search-section\">\n    <div class=\"CoveoSearchbox\" data-enable-omnibox=\"true\"></div>\n</div>\n<div class=\"coveo-main-section\">\n    <div class=\"coveo-facet-column\">\n        <div class=\"CoveoDynamicFacet\" data-title=\"Type\" data-field=\"@objecttype\" data-tab=\"All\"></div>\n<div class=\"CoveoDynamicFacet\" data-title=\"FileType\" data-field=\"@filetype\" data-tab=\"All\"></div>\n<div class=\"CoveoDynamicFacet\" data-title=\"Author\" data-field=\"@author\" data-tab=\"All\"></div>\n    </div>\n    <div class=\"coveo-results-column\">\n        <div class=\"CoveoShareQuery\"></div>\n        <div class=\"CoveoPreferencesPanel\">\n            <div class=\"CoveoResultsPreferences\"></div>\n            <div class=\"CoveoResultsFiltersPreferences\"></div>\n        </div>\n        <div class=\"CoveoTriggers\"></div>\n        <div class=\"CoveoBreadcrumb\"></div>\n        <div class=\"CoveoDidYouMean\"></div>\n        <div class=\"coveo-results-header\">\n            <div class=\"coveo-summary-section\">\n                <span class=\"CoveoQuerySummary\"></span>\n                <span class=\"CoveoQueryDuration\"></span>\n            </div>\n            <div class=\"coveo-result-layout-section\">\n                <span class=\"CoveoResultLayout\"></span>\n            </div>\n            <div class=\"coveo-sort-section\">\n                <span class=\"CoveoSort\" data-sort-criteria=\"relevancy\" data-caption=\"Relevance\"></span>\n<span class=\"CoveoSort\" data-sort-criteria=\"date descending,date ascending\" data-caption=\"Date\"></span>\n            </div>\n        </div>\n        <div class=\"CoveoHiddenQuery\"></div>\n        <div class=\"CoveoErrorReport\" data-pop-up=\"false\"></div>\n        <div class=\"CoveoResultList\" data-layout=\"list\" data-wait-animation=\"fade\" data-auto-select-fields-to-include=\"true\">\n            <script id=\"Default\" class=\"result-template\" type=\"text/html\" data-layout=\"list\"  ><div class=\"coveo-result-frame\">\n  <div class=\"coveo-result-cell\" style=\"vertical-align:top;text-align:center;width:32px;\">\n    <span class=\"CoveoIcon\" data-small=\"true\" data-with-label=\"false\"></span>\n    <div class=\"CoveoQuickview\"></div>\n  </div>\n  <div class=\"coveo-result-cell\" style=\"vertical-align: top;padding-left: 16px;\">\n    <div class=\"coveo-result-row\" style=\"margin-top:0;\">\n      <div class=\"coveo-result-cell\" style=\"vertical-align:top;font-size:16px;\" role=\"heading\" aria-level=\"2\">\n        <a class=\"CoveoResultLink\"></a>\n      </div>\n      <div class=\"coveo-result-cell\" style=\"width:120px;text-align:right;font-size:12px\">\n        <div class=\"coveo-result-row\">\n          <span class=\"CoveoFieldValue\" data-field=\"@date\" data-helper=\"date\"></span>\n        </div>\n      </div>\n    </div>\n    <div class=\"coveo-result-row\" style=\"margin-top:10px;\">\n      <div class=\"coveo-result-cell\">\n        <span class=\"CoveoExcerpt\"></span>\n      </div>\n    </div>\n    <div class=\"coveo-result-row\" style=\"margin-top:10px;\">\n      <div class=\"coveo-result-cell\">\n        <span class=\"CoveoFieldValue\" data-field=\"@author\" data-text-caption=\"Author\" style=\"margin-right:30px;\"></span>\n        <span class=\"CoveoFieldValue\" data-field=\"@source\" data-text-caption=\"Source\" style=\"margin-right:30px;\"></span>\n        <span class=\"CoveoFieldValue\" data-field=\"@language\" data-text-caption=\"Language\" style=\"margin-right:30px;\"></span>\n        <span class=\"CoveoFieldValue\" data-field=\"@filetype\" data-text-caption=\"File Type\" style=\"margin-right:30px;\"></span>\n      </div>\n    </div>\n    <div class=\"coveo-result-row\" style=\"margin-top:10px;\">\n      <div class=\"coveo-result-cell\">\n        <div class=\"CoveoPrintableUri\"></div>\n      </div>\n    </div>\n    <div class=\"coveo-result-row\">\n      <div class=\"coveo-result-cell\">\n        <div class=\"CoveoMissingTerms\"></div>\n      </div>\n    </div>\n  </div>\n</div></script>\n        </div>\n        <div class=\"CoveoPager\"></div>\n        <div class=\"CoveoLogo\"></div>\n        <div class=\"CoveoResultsPerPage\"></div>\n    </div>\n    \n</div>\n</div>\n",
+					"javascript": [
+						{
+							"inlineContent": "",
+							"name": "CoveoSearchUI",
+							"url": "https://static.cloud.coveo.com/searchui/v2.10095/js/CoveoJsSearch.Lazy.min.js"
+						},
+						{
+							"inlineContent": "",
+							"name": "CoveoSearchTemplates",
+							"url": "https://static.cloud.coveo.com/searchui/v2.10095/js/templates/templates.js"
+						},
+						{
+							"inlineContent": "",
+							"name": "CoveoInterfaceEditorToolbox",
+							"url": "https://static.cloud.coveo.com/interfaceeditor/v1.29/js/InterfaceToolbox.js"
+						},
+						{
+							"inlineContent": "",
+							"name": "CoveoInterfaceEditorToolboxString",
+							"url": "https://static.cloud.coveo.com/interfaceeditor/v1.29/js/cultures/toolbox-en.js"
+						},
+						{
+							"inlineContent": "",
+							"name": "InterfaceEditorPolyfillForIE11",
+							"url": "https://cdn.jsdelivr.net/npm/whatwg-fetch@3.0.0/dist/fetch.umd.min.js"
+						}
+					],
+					"name": "test",
+					"title": "test"
+				},
+				"parents": {},
+				"resourceName": "test_P986Qj"
+			}
+		]
+	}
+}

@@ -1,0 +1,44 @@
+name: CD
+on:
+  push:
+    branches: 
+      - main
+
+env:
+  COVEO_PLATFORM_ENV: 'stg'
+jobs:
+  qa-deploy:
+    runs-on: ubuntu-latest
+    environment: Staging
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: "npm"
+      - run: npm ci
+      - name: Login
+        uses: ./.github/actions/login
+        with:
+          environment: ${{ env.COVEO_PLATFORM_ENV }}
+          api-key: ${{ secrets.COVEO_API_KEY }}
+      - name: Deploy to Staging
+        uses: ./.github/actions/deploy
+  prod-deploy:
+    needs: qa-deploy
+    runs-on: ubuntu-latest
+    environment: Production
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: "npm"
+      - run: npm ci
+      - name: Login
+        uses: ./.github/actions/login
+        with:
+          environment: ${{ env.COVEO_PLATFORM_ENV }}
+          api-key: ${{ secrets.COVEO_API_KEY }}
+      - name: Deploy to Production
+        uses: ./.github/actions/deploy

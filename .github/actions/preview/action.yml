@@ -1,0 +1,8 @@
+name: "Login"
+description: "Login to Coveo"
+
+runs:
+  using: composite
+  steps:
+      - run: npx @coveo/cli org:resources:preview -p=light
+        shell: bash

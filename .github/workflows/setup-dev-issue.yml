@@ -1,0 +1,71 @@
+name: Setup Dev Env
+on:
+  issues:
+    types:
+      - opened
+jobs:
+  find-free-env:
+    name: Find available dev env
+    runs-on: ubuntu-latest
+    env:
+      COVEO_PLATFORM_ENV: "stg"
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    outputs:
+      environment: ${{steps.issue-data.outputs.env-name}}
+      branch: ${{steps.issue-data.outputs.branch-name}}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: "npm"
+      - name: Install dependencies
+        run: npm ci
+      - name: Verify author & Issue Type
+        run: npm run check-user
+      - name: Assign Dev Env
+        id: issue-data
+        run: npm run assign-env
+  comment-on-issue:
+    name: Comment on Issue
+    needs: find-free-env
+    runs-on: ubuntu-latest
+    env:
+      COVEO_PLATFORM_ENV: "stg"
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    environment: ${{ needs.find-free-env.outputs.environment }}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: "npm"
+      - name: Install dependencies
+        run: npm ci
+      - name: Create dev branch
+        env:
+          BRANCH_NAME: ${{ needs.find-free-env.outputs.branch }}
+        run: |
+          git config --global user.email action@github.com
+          git config --global user.name "GitHub Action"
+          git checkout -b "dev/$BRANCH_NAME"
+          git commit -m "setup $BRANCH_NAME branch [skip CI]" --allow-empty
+          git push --set-upstream origin "dev/$BRANCH_NAME"
+      - name: Answer issue & add label on issue
+        run: npm run answer-issue
+        env:
+          BRANCH_NAME: ${{ needs.find-free-env.outputs.branch }}
+          ORG_NAME: ${{ secrets.ORG_NAME }}
+          LABEL_NAME: ${{ needs.find-free-env.outputs.environment }}
+          # GHAPP_APP_ID: ${{ secrets.GHAPP_APP_ID }}
+          # GHAPP_PRIVATE_KEY: ${{ secrets.GHAPP_PRIVATE_KEY }}
+          # GHAPP_CLIENT_ID: ${{ secrets.GHAPP_CLIENT_ID }}
+          # GHAPP_CLIENT_SECRET: ${{ secrets.GHAPP_CLIENT_SECRET }}
+          # GHAPP_INSTALLATION_ID: ${{ secrets.GHAPP_INSTALLATION_ID }}
+      - name: Login
+        uses: ./.github/actions/login
+        with:
+          environment: ${{ env.COVEO_PLATFORM_ENV }}
+          api-key: ${{ secrets.COVEO_API_KEY }}
+      - name: Deploy to Dev Org
+        uses: ./.github/actions/deploy

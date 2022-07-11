@@ -1,0 +1,1 @@
+Stolen from coveo/cli 🐱‍👤

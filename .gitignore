@@ -1,0 +1,4 @@
+.coveo
+resources/manifest.json
+**/node_modules
+scripts/artifacts

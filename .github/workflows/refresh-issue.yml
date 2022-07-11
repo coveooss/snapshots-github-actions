@@ -1,0 +1,60 @@
+name: Refresh Branch
+on:
+  issue_comment:
+    types:
+      - edited
+jobs:
+  refresh-check:
+    name: Verify user & get org/branch names
+    outputs:
+      dev-environment: ${{steps.extractor.outputs.env-name}}
+      branch: ${{steps.extractor.outputs.branch-name}}
+    runs-on: ubuntu-latest
+    env:
+      COVEO_PLATFORM_ENV: "stg"
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: "npm"
+      - run: npm ci
+      - name: Check comment and get branchname
+        id: extractor
+        run: npm run check-comment
+  do-refresh:
+    name: Refresh branch
+    needs: find-free-env
+    runs-on: ubuntu-latest
+    env:
+      COVEO_PLATFORM_ENV: "stg"
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    environment: ${{ needs.refresh-check.outputs.environment }}
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ steps.branch-name-extractor.outputs.branchname }}
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: "npm"
+      - name: Login to Coveo
+        uses: ./.github/actions/login
+        with:
+          api-key: ${{ secrets.COVEO_API_KEY }}
+          environment: ${{ env.COVEO_PLATFORM_ENV }}
+      - name: Pull Org Content
+        run: npx @coveo/cli org:resources:pull -f
+      - name: Commit & Push update
+        run: |
+          git config --global user.email action@github.com
+          git config --global user.name "GitHub Action"
+          git add .
+          git commit -m "update  ${{ steps.org-id.outputs.group1 }} branch" 
+          git push
+      - name: Update comment
+        if: always()
+        run: npm run update-comment
