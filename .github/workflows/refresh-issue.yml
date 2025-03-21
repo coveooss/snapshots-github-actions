@@ -14,6 +14,11 @@ jobs:
       COVEO_PLATFORM_ENV: "stg"
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@v2
+        with:
+          egress-policy: audit
+
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
@@ -34,6 +39,11 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     environment: ${{ needs.refresh-check.outputs.environment }}
     steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@v2
+        with:
+          egress-policy: audit
+
       - uses: actions/checkout@v3
         with:
           ref: ${{ steps.branch-name-extractor.outputs.branchname }}
